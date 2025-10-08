@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="fullThrottleApp"
-    :class="{ fadein: isMainPage }"
-  >
+  <div class="fullThrottleApp" :class="{ fadein: isMainPage }">
     <Header
       :class="{ headerSlidein: isMainPage }"
       @scroll-to-section="scrollToSection"
@@ -77,7 +74,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 </script>
-
 
 <style scoped>
 .fullThrottleApp {
