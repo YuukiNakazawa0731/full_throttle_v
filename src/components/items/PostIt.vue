@@ -70,4 +70,12 @@ onUnmounted(() => {
   color: #404040;
   transition: 0.3s;
 }
+
+@media (max-width: 480px) {
+  .postIt {
+    height: 4.5rem;
+    width: 100%;
+    font-size: 3rem;
+  }
+}
 </style>

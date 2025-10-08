@@ -1,6 +1,6 @@
 # Full Throttle Vue
 
-Vue 3 + Vite をベースにしたモダンなポートフォリオサイトです。
+Vue 3 + Vite をベースにしたポートフォリオサイト。
 
 🌐 **デモサイト**: [https://yuukinakazawa0731.github.io/full_throttle_v/](https://yuukinakazawa0731.github.io/full_throttle_v/)
 
@@ -13,7 +13,6 @@ Vue 3 + Vite をベースにしたモダンなポートフォリオサイトで�
 - JSON データによる動的コンテンツ管理
 - 初回アクセス時のローディングアニメーション
 - 各種アニメーション・トランジション実装
-- GitHub Actions による自動デプロイ
 
 ## ディレクトリ構成
 
@@ -35,10 +34,6 @@ npm run build
 # ローカルでプレビュー
 npm run preview
 ```
-
-## デプロイメント
-
-このプロジェクトは GitHub Actions を使用して自動デプロイされます。
 
 ## 📂 プロジェクト構造
 

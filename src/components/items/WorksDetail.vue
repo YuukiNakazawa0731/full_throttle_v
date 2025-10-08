@@ -10,17 +10,13 @@
       >
         ‹
       </button>
-      <a
-        v-if="images.length"
-        :href="images[currentIdx].href || '#'"
-        target="_blank"
-      >
+      <div v-if="images.length">
         <img
           :src="images[currentIdx].src"
           :alt="images[currentIdx].alt"
           class="worksImgBox"
         />
-      </a>
+      </div>
       <button
         v-if="total > 1"
         class="sliderArrow next"
@@ -117,9 +113,22 @@ function next() {
 /* スライダー用スタイル */
 .worksImgOuter {
   position: relative;
-  top: 15%;
-  left: 15%;
-  width: 70%;
+  top: clamp(4rem, 8vh, 15%);
+  margin: 0 auto;
+  width: min(90%, 110rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  background: #00000040;
+  border: 0.1rem solid #ffffff22;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.worksImgOuter > div {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,9 +136,10 @@ function next() {
 
 .worksImgBox {
   display: block;
-  margin: auto;
-  width: 1100px;
-  height: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -137,27 +147,33 @@ function next() {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 10rem;
+  font-size: clamp(4rem, 6vw, 7.2rem);
+  line-height: 1;
   background: none;
   border: none;
   color: #ff9100;
   cursor: pointer;
   z-index: 2;
   user-select: none;
+  transition: color 0.3s;
 }
 .sliderArrow.prev {
-  left: -5%;
+  left: 1rem;
 }
 .sliderArrow.next {
-  right: -5%;
+  right: 1rem;
 }
 
 .sliderDots {
   position: absolute;
-  bottom: -7%;
+  bottom: 0.4rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(48%);
+  height: 10%;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.2rem;
 }
+
 .sliderDots span {
   cursor: pointer;
   font-size: 2rem;
@@ -170,22 +186,24 @@ function next() {
 
 .worksTitleOuter {
   position: relative;
-  top: 20%;
+  margin: clamp(2rem, 3vh, 4rem) auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  gap: 10px;
+  flex-wrap: wrap;
+  width: min(90%, 110rem);
+  gap: 0.8rem;
 }
 
 .worksTitle {
   position: relative;
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 1.2rem + 1.2vw, 2.6rem);
   color: #fff;
   margin: 0;
   vertical-align: middle;
-  padding: 0 0.5em;
+  padding: 0 0.5em 0.2em;
+  text-align: center;
 }
 .worksTitle:before {
   position: absolute;
@@ -197,36 +215,37 @@ function next() {
 }
 
 .blankImg {
-  width: 20px;
-  height: 20px;
-  margin-top: 10px;
+  width: clamp(1.6rem, 1.2rem + 0.6vw, 2.4rem);
+  height: clamp(1.6rem, 1.2rem + 0.6vw, 2.4rem);
+  margin-top: 0.4rem;
   vertical-align: middle;
   display: inline-block;
 }
 
 .worksTxtOuter {
   position: relative;
-  top: 20%;
-  margin: 0 auto;
+  margin: clamp(1.6rem, 3vh, 3.2rem) auto clamp(3.2rem, 6vh, 6rem);
   text-align: center;
+  width: min(90%, 96rem);
 }
 
 .worksTxt {
   margin: 2% auto 0;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
   color: #fff;
+  font-size: clamp(1.4rem, 1rem + 0.6vw, 1.8rem);
 }
 
 .useTools {
   margin: 2% auto 0;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 0.8rem + 0.6vw, 1.6rem);
   color: #ff9100;
 }
 
 .modalNav {
-  margin: 4% auto;
-  font-size: 1.4rem;
+  margin: 4% auto 0;
+  font-size: clamp(1.2rem, 0.8rem + 0.6vw, 1.6rem);
   color: #fff;
   animation: blink 2s linear infinite;
 }
@@ -237,6 +256,62 @@ function next() {
   }
   50% {
     opacity: 0;
+  }
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 1024px) {
+  .worksImgOuter {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 768px) {
+  .worksImgOuter {
+    width: 94%;
+  }
+
+  .sliderDots {
+    bottom: 0.2rem;
+  }
+
+  .worksTxt {
+    text-align: center;
+  }
+
+  .sliderArrow.prev {
+    left: 0.4rem;
+  }
+
+  .sliderArrow.next {
+    right: 0.4rem;
+  }
+
+  .worksTitleOuter {
+    margin-top: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .worksImgOuter {
+    aspect-ratio: 4 / 3;
+  }
+
+  .sliderDots {
+    bottom: 0.2rem;
+  }
+
+  .worksTitleOuter {
+    margin-top: 8rem;
+  }
+
+  .worksTxt {
+    padding: 5%;
+    font-size: 1.4rem;
+  }
+
+  .modalNav {
+    margin-top: 2.4rem;
   }
 }
 </style>

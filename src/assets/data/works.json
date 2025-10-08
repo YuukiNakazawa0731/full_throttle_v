@@ -5,7 +5,7 @@
     "detail": {
       "title": {
         "text": "Full_throtle",
-        "href": "https://full-throttle-portfolio.com/"
+        "href": "https://yuukinakazawa0731.github.io/full_throttle/"
       },
       "images": [
         {
@@ -21,8 +21,8 @@
           "alt": "Full_throtle_img3"
         }
       ],
-      "text": "このポートフォリオサイトです。<br>タイトルのように疾走感をイメージして作成しました。<br>これからもアップデートしていきます。",
-      "tools": "design/HTML/Jquery/PHP"
+      "text": "プログラミングを学び最初に作成したポートフォリオサイトです。<br>タイトルのように疾走感をイメージして作成しました。<br>Jquery、slickを使用し、動きのあるサイトに仕上げました。",
+      "tools": "design/HTML/Jquery"
     }
   },
   {
@@ -31,7 +31,7 @@
     "detail": {
       "title": {
         "text": "草々 -sow sow-",
-        "href": "https://sow-sow.com/"
+        "href": "https://yuukinakazawa0731.github.io/sowsow/"
       },
       "images": [
         {
@@ -57,7 +57,7 @@
     "detail": {
       "title": {
         "text": "fiction",
-        "href": "https://fiction-company.com/"
+        "href": "https://yuukinakazawa0731.github.io/fiction/"
       },
       "images": [
         {
@@ -83,7 +83,7 @@
     "detail": {
       "title": {
         "text": "Full_throtle",
-        "href": "https://full-throttle-portfolio.com/"
+        "href": "https://yuukinakazawa0731.github.io/full_throttle_v/"
       },
       "images": [
         {
@@ -100,7 +100,7 @@
         }
       ],
       "text": "既存のポートフォリオサイトをスキルアップのためにリニューアルしたものです。<br>Vue.jsを使用し、作り直しました",
-      "tools": "design/HTML/Jquery/PHP"
+      "tools": "design/Vue.js(Vue3)/Vite"
     }
   }
 ]

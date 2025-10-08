@@ -3,23 +3,49 @@
 #titleContainer {
   position: relative;
   display: grid;
-  grid-auto-columns: 20%;
-  grid-auto-rows: 20%;
-  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  min-height: 100dvh;
   width: 100%;
   background-image: url("/src/assets/images/title/title_back.jpeg");
   background-size: cover;
+  background-position: center;
   transition: 1s ease;
 }
 
 .titleLogo {
   opacity: 0;
   transition: opacity 3s;
-  grid-column: 1;
+  grid-column: 1 / span 2;
   grid-row: 3;
-  margin-left: 25%;
-  width: 220%;
+  margin-left: clamp(0rem, 4vw, 8%);
+  width: clamp(50%, 32vw, 90%);
+  max-width: 52rem;
 }
 .titleLogoFadein {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #titleContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .titleLogo {
+    grid-column: 1 / span 3;
+    width: clamp(60%, 52vw, 95%);
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  #titleContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titleLogo {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    width: clamp(70%, 84vw, 90%);
+  }
 }

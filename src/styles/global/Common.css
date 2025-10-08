@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*===[デフォルトcss]===*/
 *,
 *::before,
@@ -13,19 +14,25 @@
 }
 
 html {
-  font-size: 62.5%; /*サイズリセット*/
+  font-size: clamp(56%, 0.6rem + 0.6vw, 62.5%);
   font-family: "Arial", "メイリオ", sans-serif; /*フォント*/
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
-  height: 100vh;
-  font-size: 1.6em; /*絶対サイズ*/
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
 }
 
 img {
   display: block;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -54,20 +61,37 @@ table {
 }
 
 /*=== コンテンツページ共通スタイル ===*/
+/* === レイアウト基盤 === */
+:root {
+  --content-max-width: 1280px;
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --shadow-elev: 1.6rem 1.6rem 1.3rem #0e0d0d;
+  --color-text: #535353;
+  --bp-xs: 480px;
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1400px;
+}
+
 .contentsContainer {
   position: relative;
-  padding: 0.1% 8%;
+  padding: var(--space-sm) clamp(var(--space-md), 4vw, 8%);
   width: 100%;
-  min-height: 2000px;
+  min-height: min(1600px, 100%);
 }
 
 .contentsOuter {
-  margin: 10% auto 20%;
-  padding: 5% 0;
+  margin: clamp(3rem, 8vh, 10%) auto clamp(6rem, 12vh, 20%);
+  padding: clamp(1.6rem, 4%, 5%) 0;
   width: 95%;
-  border-radius: 0.2rem;
-  box-shadow: 1.6rem 1.6rem 1.3rem #0e0d0d;
-  transition: all 0.8s ease-out;
+  border-radius: 0.4rem;
+  box-shadow: var(--shadow-elev);
+  transition: box-shadow 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* シャドウ */
@@ -78,6 +102,7 @@ table {
   left: 0;
   height: 100%;
   width: 25%;
+  pointer-events: none;
   background: linear-gradient(90deg, #00000026, #00000000);
 }
 .windowShadowR {
@@ -87,5 +112,77 @@ table {
   right: 0;
   height: 100%;
   width: 25%;
+  pointer-events: none;
   background: linear-gradient(-90deg, #00000026, #00000000);
+}
+
+/* === ユーティリティ === */
+.u-flex {
+  display: flex !important;
+}
+
+.u-flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.u-grid-auto-fit {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: var(--space-lg);
+}
+
+.u-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* === メディアクエリ (共通調整) === */
+@media (max-width: 1024px) {
+  .contentsOuter {
+    margin: clamp(2rem, 6vh, 6rem) auto clamp(4rem, 10vh, 10%);
+  }
+
+  .windowShadowL,
+  .windowShadowR {
+    width: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: clamp(58%, 2vw + 42%, 62.5%);
+  }
+
+  .contentsContainer {
+    padding: var(--space-md) var(--space-md);
+  }
+
+  .contentsOuter {
+    padding: clamp(1rem, 3vh, 2.4rem) 0;
+  }
+
+  .windowShadowL,
+  .windowShadowR {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    line-height: 1.5;
+  }
+
+  .contentsOuter {
+    width: 100%;
+    margin: 3rem 0 6rem;
+  }
 }

@@ -41,7 +41,7 @@ const props = defineProps({
   position: fixed;
   bottom: 2%;
   left: 1%;
-  z-index: 10;
+  z-index: 100;
   opacity: 0;
   display: flex;
   justify-content: center;
@@ -61,6 +61,7 @@ const props = defineProps({
   opacity: 0;
   left: -20%;
 }
+
 .outerCircleImg {
   width: 100%;
   animation: circleRoll ease-in-out 7s infinite;
@@ -91,6 +92,7 @@ const props = defineProps({
     transform: translateY(1%);
   }
 }
+
 /*バイク発進*/
 .returnBikeBody.bikeDash {
   transition: 0.1s ease;
@@ -126,5 +128,19 @@ const props = defineProps({
 .returnTopIcon:hover .tireF,
 .returnTopIcon:hover .tireR {
   animation: tireRoll 0.2s linear infinite;
+}
+
+@media (max-width: 780px) {
+  .returnTopIcon {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .returnTopIcon {
+    height: 8rem;
+    width: 8rem;
+  }
 }
 </style>

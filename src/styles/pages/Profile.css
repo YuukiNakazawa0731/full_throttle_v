@@ -55,9 +55,11 @@
 
 .profileTxtOuter {
   position: relative;
-  width: 85%;
+  flex: 1 1 auto;
+  min-width: 0;
   text-align: left;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .profileTxtHead {
@@ -74,4 +76,63 @@
 
 .profileTxtFoot {
   padding: 0.5% 5%;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+@media (max-width: 780px) {
+  .profileTitle {
+    margin: 20% auto 7%;
+  }
+
+  .profileInnerL,
+  .profileInnerR {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 92%;
+    padding: 0 4%;
+  }
+  .profilePhoto {
+    width: clamp(12rem, 40%, 20rem);
+    margin: 0 0 1.2rem;
+  }
+  .profileTxtOuter {
+    width: 100%;
+  }
+  .arrowImg {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileTitle {
+  width: 90%;
+  font-size: 2.2rem;
+  }
+
+  .profileInnerL,
+  .profileInnerR {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 92%;
+    padding: 0 4%;
+  }
+  .profilePhoto {
+    width: clamp(6rem, 40%, 14rem);
+    margin: 0 0 1.2rem;
+  }
+  .profileTxtOuter {
+    width: 100%;
+  }
+  .arrowImg {
+    display: none;
+  }
+  .profileTxtHead {
+  font-size: 1.6rem;
+}
+
+.profileTxtFoot {
+  font-size: 1.4rem;
+}
+
 }

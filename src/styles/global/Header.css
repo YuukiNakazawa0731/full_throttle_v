@@ -6,11 +6,20 @@ header {
   z-index: 100;
   transform: translateY(-100%);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5% 0;
+  background-color: #0e0d0d;
+}
+
+.headerInner {
+  position: relative;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1%;
-  background-color: #0e0d0d;
+  padding: 0 3%;
 }
 .headerSlidein {
   opacity: 0.7;
@@ -20,33 +29,120 @@ header {
 
 .headerLogoOuter {
   display: block;
-  width: 10%;
-  margin-left: 2%;
+  width: clamp(5.2rem, 9.5%, 9.2rem);
+  margin-left: clamp(0.8rem, 2%, 2rem);
 }
 
 .headLogo {
+  width: 180%;
   transition: all 0.2s ease-in-out;
 }
 .headLogo:hover {
-  transform: rotate(5deg);
+  transform: rotate(5deg) scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headLogo {
+    transition: none;
+  }
+
+  .headLogo:hover {
+    transform: none;
+  }
 }
 
 .headLogoImg {
   width: 100%;
 }
 
-/* ==[メニュー]== */
+/* === Hamburger Button === */
+.navToggle {
+  display: none;
+  position: relative;
+  width: 3.2rem;
+  height: 2.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.navToggleBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: #ffffff;
+  border-radius: 0.2rem;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.navToggleBar:nth-child(1) {
+  top: 0;
+}
+.navToggleBar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navToggleBar:nth-child(3) {
+  bottom: 0;
+}
+
+header.is-open .navToggleBar:nth-child(1) {
+  transform: translateY(1.05rem) rotate(45deg);
+}
+header.is-open .navToggleBar:nth-child(2) {
+  opacity: 0;
+}
+header.is-open .navToggleBar:nth-child(3) {
+  transform: translateY(-1.05rem) rotate(-45deg);
+}
+
+/* Off-canvas menu (ALL viewports) */
+.navToggle {
+  display: block;
+}
+
 .menuListOuter {
+  position: absolute;
+  top: 100%;
+  right: 0;
   display: flex;
-  margin-right: 10%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: rgba(14, 13, 13, 0.96);
+  padding: 0 2.4rem 0;
+  max-height: 0;
+  overflow: hidden;
+  width: min(70vw, 28rem);
+  max-width: calc(100vw - 1.2rem);
+  box-sizing: border-box;
+  overscroll-behavior: contain;
+  border: 0.1rem solid #303030;
+  border-top: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: max-height 0.5s ease, padding 0.35s ease, opacity 0.35s ease;
+}
+.menuListOuter.menu-open {
+  max-height: calc(100dvh - 4.8rem);
+  padding: 1.6rem 2.4rem 2.4rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menuItem {
+  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 2rem);
 }
 
 .menuItem {
   position: relative;
   display: flex;
-  margin: 0 5%;
   color: #ffffff;
-  font-size: 2.6rem;
+  font-size: clamp(1.4rem, 1.2rem + 0.9vw, 2.2rem);
   font-family: "Raleway", "sans-serif";
   transition: all 0.3s ease-in;
 }
@@ -64,4 +160,83 @@ header {
 }
 .menuItem:hover:before {
   width: 100%;
+}
+
+/* === Responsive Header調整 === */
+@media (min-width: 1280px) {
+  /* ハンバーガーメニュー不要 */
+  .navToggle {
+    display: none;
+  }
+
+  .menuListOuter {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(2rem, 2.4vw, 4rem);
+    background: transparent;
+    border: none;
+    padding: 0;
+    max-height: none;
+    width: auto;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    overflow: visible;
+    transition: none;
+  }
+
+  .menuItem {
+    font-size: 2.6rem;
+  }
+  header.is-open .navToggleBar:nth-child(1),
+  header.is-open .navToggleBar:nth-child(2),
+  header.is-open .navToggleBar:nth-child(3) {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+
+  .headerLogoOuter {
+    width: clamp(4.8rem, 11%, 8.4rem);
+    margin-left: 0.8rem;
+  }
+
+  .menuItem {
+    display: block;
+    right: 0;
+    justify-content: flex-end; /* メニュー項目を右寄せ */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerInner {
+    width: 100%;
+  }
+
+  .menuListOuter {
+    width: min(92vw, 30rem);
+    max-width: calc(100vw - 0.8rem);
+    align-items: flex-end; /* 480px以下で項目右寄せ */
+    text-align: right;
+  }
+
+  .menuItem {
+    font-size: clamp(1.2rem, 3.8vw, 1.6rem);
+    justify-content: flex-end; /* アイテム内容も右寄せ */
+  }
+
+  .headerLogoOuter {
+    width: clamp(9rem, 14%, 9rem);
+    margin-left: clamp(0rem, 0%, 0rem);
+  }
+
+  .headLogo {
+    width: 120%;
+  }
 }
