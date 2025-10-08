@@ -43,7 +43,8 @@ import Profile from "../pages/Profile.vue";
 import Skill from "../pages/Skill.vue";
 import Works from "../pages/Works.vue";
 import Footer from "../global/Footer.vue";
-import returnTopButton from "../../Items/returnTopButton.vue";
+// NOTE: 'Items' -> 'items' (lowercase). Git case-insensitive FS (Windows) hides error locally, but CI (Linux) fails.
+import returnTopButton from "@/components/items/returnTopButton.vue";
 import woodGrain from "@/assets/images/contents/wood_grain.png";
 
 const showReturnToTop = ref(false);
