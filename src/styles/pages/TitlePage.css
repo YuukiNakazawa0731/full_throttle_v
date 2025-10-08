@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#titleContainer {
+  position: relative;
+  display: grid;
+  grid-auto-columns: 20%;
+  grid-auto-rows: 20%;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/src/assets/images/title/title_back.jpeg");
+  background-size: cover;
+  transition: 1s ease;
+}
+
+.titleLogo {
+  opacity: 0;
+  transition: opacity 3s;
+  grid-column: 1;
+  grid-row: 3;
+  margin-left: 25%;
+  width: 220%;
+}
+.titleLogoFadein {
+  opacity: 1;
+}

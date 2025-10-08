@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.skillList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10% 5% 5%;
+}
+
+.skillItem {
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  margin: 1% auto;
+  padding: 1%;
+  width: 46%;
+  box-shadow: 0rem 0.2rem 0.3rem #0a0a0a4d;
+  background-color: #ffffff;
+}
+
+.skillImg {
+  margin: auto;
+  width: 15%;
+}
+
+.skillCont {
+  margin: 1%;
+  width: 85%;
+  text-align: left;
+}
+
+.skillLabel {
+  padding-left: 0.5%;
+  font-size: 2.4rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #818181;
+  font-family: "Arial", "sans-serif";
+  border-bottom: 0.15rem solid #818181;
+}
+
+.skillTxt {
+  padding-top: 3%;
+}
+
+.skillLink {
+  display: inline;
+  font-weight: bold;
+  color: #0000ff;
+  cursor: pointer;
+}
+
+.othersList {
+  margin: 1% auto;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.othersTxt {
+  position: relative;
+  padding: 0 3%;
+  list-style: none;
+}
+.othersTxt::before {
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  content: "";
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.othersTxtSub {
+  padding: 0 3%;
+  list-style: none;
+}
+
+.licenseCont {
+  margin: auto;
+  width: 60%;
+  box-shadow: 0rem 0.2rem 0.3rem #0a0a0a4d;
+  background-color: #ffffff;
+}
+
+.licenseInner {
+  padding: 2%;
+  width: 100%;
+}
+
+.licenseHead {
+  padding-bottom: 0.5%;
+  letter-spacing: 0.3rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-bottom: 0.2rem solid #818181;
+}
+
+.licenseTxt {
+  padding: 2% 0.5% 0;
+  text-align: left;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "htmlcss.png",
+    "alt": "html",
+    "label": "HTML/CSS",
+    "text": "HTML5/CSS3の基本を理解し、手書きでのコーディングをメインで行っております。SEO対策やアクセシビリティにも配慮したマークアップが可能です。レスポンシブデザインの実装経験も豊富です。UI/UXを意識したデザイン設計や、アニメーション・トランジションの導入も行っています。<br />また、BEMやFLOCSSなどのCSS設計手法も学習しており、保守性の高いスタイル設計を心がけています。<br />UI/UXを意識したレスポンシブ対応の<a class='skillLink' href='index_parts/about_works/fiction.html'>ホームページ</a>も作成しました。"
+  },
+  {
+    "id": 2,
+    "img": "js_jq.png",
+    "alt": "js",
+    "label": "JavaScript <small>(jQuery)</small>",
+    "text": "JavaScriptの基本文法から、配列・オブジェクトの操作、非同期処理（Promise/async/await）まで幅広く理解しています。DOM操作やイベント処理、アニメーション機能の実装も行うことができます。<br />jQueryを使用し、フォームバリデーションやAjax通信、スライダーやモーダルなどのUIパーツの実装もできます。<br />また、ES6以降の新しい構文や、モジュール化にも対応しています。<br />API連携やデータの動的表示も経験しています。"
+  },
+  {
+    "id": 3,
+    "img": "php.png",
+    "alt": "php",
+    "label": "PHP",
+    "text": "PHPの基本文法から、データの処理機能やデータベース（MySQL）との連携、セキュリティ観点も考慮した実装・構築が可能です。セッション管理やフォーム処理、ファイルアップロードなどの機能も実装できます。<br />UI/UXを意識した簡単な掲示板やお問い合わせフォームの作成が可能です。<br />※制作物の<a class='skillLink' href='index_parts/about_works/sowsow.html'>簡易掲示板</a>をご参照下さい。<br />MySQLの基本構文の実装や基本的なDB設計も行うことができ、SQLインジェクション対策などセキュリティにも配慮しています。"
+  },
+  {
+    "id": 4,
+    "img": "python.png",
+    "alt": "python",
+    "label": "Python",
+    "text": "Pythonの基本的な文法やデータ構造（リスト・辞書・タプル等）を理解し、実際に業務効率化やデータ処理の自動化スクリプトを作成した経験があります。外部ライブラリ（pandas、openpyxl、requests等）を活用したデータ解析やWebスクレイピングも可能です。<br />また、Raspberry Piを用いたIoT開発や、センサー制御、ハードウェア連携のプログラムも作成しました。<br />制作物として、自動車の『キーレス連動ドアミラー自動開閉システム』の制御プログラムをPythonで開発し、実際に車両へ組み込みました。"
+  },
+  {
+    "id": 5,
+    "img": "vue_logo.png",
+    "alt": "vue.js",
+    "label": "vue.js",
+    "text": "Vue.jsを用いたSPA（シングルページアプリケーション）の開発経験があります。基本的な操作やコンポーネント設計、状態管理（Composition APIやPiniaなど）を理解し、実際のプロジェクトで実装した経験があります。<br />外部ライブラリ（Vue Routerやaxios、UIフレームワーク等）を活用した開発も可能です。<br />また、コンポーネント間のデータ連携やスロット、カスタムイベントの設計も行えます。"
+  },
+  {
+    "id": 6,
+    "img": "other.png",
+    "alt": "other",
+    "label": "Others",
+    "text": "<ul class='othersList'>Microsoft Office</ul><li class='othersTxt'>ExcelやAccessを用いた在庫管理・顧客情報管理のシステム構築。</li><li class='othersTxt'>Wordでの見積書や各種文書の作成、PowerPointでのプレゼン資料や講習会資料の作成。</li><li class='othersTxt'>VBAによる業務自動化の経験もあります。</li><ul class='othersList'>検索力</ul><li class='othersTxtSub'>今回のポートフォリオやPCの環境構築など、不明点は適切なキーワードや検索オプションを設定し、Web検索にて自己解決をすることができます。新しい技術や情報も積極的にキャッチアップしています。</li>"
+  }
+]

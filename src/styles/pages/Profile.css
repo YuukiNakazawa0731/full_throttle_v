@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.profileTitle {
+  position: relative;
+  margin: 5% auto 7%;
+  width: 50%;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #818181;
+}
+.profileTitle::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  border-bottom: 0.6rem double #ff8800;
+}
+
+.vprofileOuter {
+  padding: 0 10%;
+  text-align: center;
+}
+
+.profileInnerL,
+.profileInnerR {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5% auto;
+  width: 80%;
+}
+
+.profileInnerL {
+  padding-right: 10%;
+}
+
+.profileInnerR {
+  padding-left: 10%;
+}
+
+.profilePhoto {
+  z-index: 1;
+  width: 17%;
+  border: 0.5rem solid #ff8800;
+  border-radius: 50%;
+}
+
+.arrowImg {
+  position: absolute;
+  bottom: -55%;
+  left: 7.5%;
+  width: 10%;
+}
+
+.profileTxtOuter {
+  position: relative;
+  width: 85%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.profileTxtHead {
+  padding: 0 5%;
+  font-size: 2.6rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #818181;
+}
+
+.profileTxtLine {
+  display: block;
+  height: 0.1rem;
+  background-color: #818181;
+}
+
+.profileTxtFoot {
+  padding: 0.5% 5%;
+}

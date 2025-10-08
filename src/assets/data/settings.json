@@ -1,0 +1,59 @@
+{
+  "loading": {
+    "loadingText": "Now Loading..."
+  },
+  "header": {
+    "top": "top",
+    "about": "about",
+    "profile": "profile",
+    "skill": "skill",
+    "works": "works"
+  },
+  "footer": {
+    "copyRight": "Nakazawa Yuuki 2025"
+  },
+  "title": {
+    "clickMe": "Click Me"
+  },
+  "about": {
+    "title": "About",
+    "aboutName": "仲澤勇樹",
+    "nameRuby": "Nakazawa Yuuki",
+    "aboutTxt": "北海道江別市出身。短大の自動車工業科に通い、卒業後に自動車ディーラーに就職。\n約１２年間、自動車整備士・自動車検査員として勤務。機械工学、電子制御などの様々なスキルを習得しました。\nその後、数社の転職を経て「鉄道・船舶・バイク・電動自転車など」多岐に渡る業界を経験し成長することができました。\nしかし、その間に元々持っていた障害が悪化。そのため一旦、立ち止まり身体と環境を立て直すことに。\nwebエンジニアを目指し日々、学習を続けました\n現在はプログラマとして就職しフロントエンド・バックエンドの両方に携わっています。"
+  },
+  "profile": {
+    "title": "Profile",
+    "profileTitle": "人生をまとめてみました",
+    "profileTxtHeadA": "北海道江別市にて生を受ける",
+    "profileTxtHeadB": "小・中学校と野球に励む",
+    "profileTxtHeadC": "高校・短大時代はバイトとライブの日々",
+    "profileTxtHeadD": "自動車整備士として",
+    "profileTxtHeadE": "結婚",
+    "profileTxtHeadF": "サービスエンジニア",
+    "profileTxtHeadG": "障がいが悪化",
+    "profileTxtHeadH": "目標に向かって",
+    "profileTxtHeadI": "新たな人生へ",
+
+    "profileTxtFootA": "",
+    "profileTxtFootB": "小学６年の時に全道大会で優勝できたことは、一生の思い出です。",
+    "profileTxtFootC": "働くことが楽しく、毎日アルバイトばかりしていました。\n魚屋・たいやき屋・解体業 etc..\n中でも、マグロの解体ショーを任された時は緊張しました。",
+    "profileTxtFootD": "整備士・検査員業務で、ほぼ毎日遅くまで残業の激務でした。\nですが、この期間で体験は自分の中で大きく、知識や経験、考え方、人脈など\n財産を得ることができました。",
+    "profileTxtFootE": "結婚１年後に長男が生まれました。",
+    "profileTxtFootF": "この間、数社を経験。様々な業界で新たな知識を取得。\nそして、修理業務の他にクレーム処理や事務作業、技術講師、営業など\nいろいろな経験をしました。",
+    "profileTxtFootG": "元々持っていた障がい(本態性振戦)が悪化。\n普段の業務にも支障をきたし努力したが退職することに。\nその後リハビリや通院を経て回復。",
+    "profileTxtFootH": "以前から興味があったプログラミングに触れて衝撃が走る。\n「好きこそ物の上手なれ」\nエンジニアを目指し努力の日々。",
+    "profileTxtFootI": "プログラマとして就職。\nフロントエンド・バックエンドの両方に携わり様々な言語スキルを習得。\nこれからも、日々成長していきます。"
+  },
+  "skill": {
+    "title": "Skills",
+    "licenseHead": "保有資格",
+    "licenseTxt": "普通自動車免許第一種\n中型・大型自動二輪免許\n国家２級自動車整備士 / 自動車検査員\nガス / アーク溶接技能者\n玉掛技能者 / 床上操作式クレーン\n低電圧取扱責任者 / 損害保険募集人"
+  },
+  "works": {
+    "title": "Works"
+  },
+  "modal": {
+    "infoTxt": "ご覧いただきありがとうございます\nこちらは仲澤勇樹のポートフォリオです\nタイトルの『Full throtle(フルスロットル)』\nは、仕事も遊びも妥協せず\n全開に取り組む自分にちなみつけました\n一生懸命、制作しましたので\n後までご覧いただけましたら幸いです",
+    "modalNav": "画面クリックでCLOSE"
+  }
+}

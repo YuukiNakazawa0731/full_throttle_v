@@ -1,0 +1,106 @@
+[
+  {
+    "heading": "Full_throtle",
+    "child": "ポートフォリオ",
+    "detail": {
+      "title": {
+        "text": "Full_throtle",
+        "href": "https://full-throttle-portfolio.com/"
+      },
+      "images": [
+        {
+          "src": "Full_throtle_img1.png",
+          "alt": "Full_throtle_img1"
+        },
+        {
+          "src": "Full_throtle_img2.png",
+          "alt": "Full_throtle_img2"
+        },
+        {
+          "src": "Full_throtle_img3.png",
+          "alt": "Full_throtle_img3"
+        }
+      ],
+      "text": "このポートフォリオサイトです。<br>タイトルのように疾走感をイメージして作成しました。<br>これからもアップデートしていきます。",
+      "tools": "design/HTML/Jquery/PHP"
+    }
+  },
+  {
+    "heading": "草々 -sow sow-",
+    "child": "簡易掲示板サイト",
+    "detail": {
+      "title": {
+        "text": "草々 -sow sow-",
+        "href": "https://sow-sow.com/"
+      },
+      "images": [
+        {
+          "src": "sowsow_img1.png",
+          "alt": "sowsow_img1"
+        },
+        {
+          "src": "sowsow_img2.png",
+          "alt": "sowsow_img2"
+        },
+        {
+          "src": "sowsow_img3.png",
+          "alt": "sowsow_img3"
+        }
+      ],
+      "text": "簡易掲示板サイトです。<br>書き込み・検索のほかログイン認証機能を実装しました。<br>PHPを勉強し楽しみながら作成することができました。",
+      "tools": "design/HTML/Jquery/PHP/MYSQL"
+    }
+  },
+  {
+    "heading": "fiction",
+    "child": "架空の企業サイト",
+    "detail": {
+      "title": {
+        "text": "fiction",
+        "href": "https://fiction-company.com/"
+      },
+      "images": [
+        {
+          "src": "fiction_img1.png",
+          "alt": "fiction_img_1"
+        },
+        {
+          "src": "fiction_img2.png",
+          "alt": "fiction_img_2"
+        },
+        {
+          "src": "fiction_img3.png",
+          "alt": "fiction_img_3"
+        }
+      ],
+      "text": "自分で創作した架空の企業サイトです。見やすさと操作感を意識して作成しました。<br>リンクしてあるショッピングサイトも実際に使えるよう考えてあります。",
+      "tools": "design/HTML/Jquery/PHP/MYSQL"
+    }
+  },
+  {
+    "heading": "Full_throtle(Vue)",
+    "child": "ポートフォリオ",
+    "detail": {
+      "title": {
+        "text": "Full_throtle",
+        "href": "https://full-throttle-portfolio.com/"
+      },
+      "images": [
+        {
+          "src": "Full_throtle_img1.png",
+          "alt": "Full_throtle_img1"
+        },
+        {
+          "src": "Full_throtle_img2.png",
+          "alt": "Full_throtle_img2"
+        },
+        {
+          "src": "Full_throtle_img3.png",
+          "alt": "Full_throtle_img3"
+        }
+      ],
+      "text": "既存のポートフォリオサイトをスキルアップのためにリニューアルしたものです。<br>Vue.jsを使用し、作り直しました",
+      "tools": "design/HTML/Jquery/PHP"
+    }
+  }
+]

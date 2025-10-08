@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/*===[デフォルトcss]===*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #535353;
+  font-weight: normal;
+}
+
+html {
+  font-size: 62.5%; /*サイズリセット*/
+  font-family: "Arial", "メイリオ", sans-serif; /*フォント*/
+  scroll-behavior: auto;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6em; /*絶対サイズ*/
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+select {
+  display: block;
+  border: 0.1rem solid #000000;
+  background-color: #cacaca;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*=== コンテンツページ共通スタイル ===*/
+.contentsContainer {
+  position: relative;
+  padding: 0.1% 8%;
+  width: 100%;
+  min-height: 2000px;
+}
+
+.contentsOuter {
+  margin: 10% auto 20%;
+  padding: 5% 0;
+  width: 95%;
+  border-radius: 0.2rem;
+  box-shadow: 1.6rem 1.6rem 1.3rem #0e0d0d;
+  transition: all 0.8s ease-out;
+}
+
+/* シャドウ */
+.windowShadowL {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(90deg, #00000026, #00000000);
+}
+.windowShadowR {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(-90deg, #00000026, #00000000);
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.aboutName {
+  margin-top: 5%;
+  padding: 5% 3% 0;
+  text-align: center;
+  letter-spacing: 1rem;
+  font-size: 6rem;
+  font-family: "Noto Sans JP", "sans-serif";
+  text-shadow: 0.2rem 0.2rem 0.1rem #818181;
+}
+
+.nameRuby {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.aboutTxt {
+  position: relative;
+  padding: 5% 10% 10%;
+  text-align: center;
+  line-height: 2;
+}
+
+.aboutPhotoOuter {
+  position: relative;
+  width: 100%;
+}
+
+.aboutPhoto {
+  position: absolute;
+  transform: rotate(15deg);
+  right: 3%;
+  width: 18%;
+  border: 0.5rem solid #ffffff;
+  box-shadow: 1.6rem 1.6rem 1.3rem #0e0d0d;
+}
