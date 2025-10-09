@@ -40,11 +40,11 @@ defineEmits(["close-modal"]);
 
 .infoContainer {
   position: relative;
-  margin: clamp(4rem, 8vh, 12rem) auto clamp(3.2rem, 6vh, 8rem);
+  margin: clamp(16rem, 8vh, 14rem) auto clamp(3.2rem, 6vh, 8rem);
   padding: clamp(2rem, 4vh, 4rem) clamp(1.6rem, 4vw, 4.8rem)
     clamp(3.2rem, 6vh, 4.8rem);
-  width: min(64ch, 70%);
-  max-width: 860px;
+  width: min(64ch, 80%);
+  max-width: 1000px;
   text-align: left;
   border: 0.3rem outset #ff8800;
   border-radius: 0.8rem;
@@ -54,9 +54,9 @@ defineEmits(["close-modal"]);
 }
 
 .infoTxt {
-  font-size: clamp(1.5rem, 1.1rem + 0.9vw, 2.2rem);
+  font-size: clamp(1.5rem, 1.1rem + 0.9vw, 1.6rem);
   color: #373737;
-  line-height: clamp(2.2rem, 1.4rem + 1.2vw, 3.2rem);
+  line-height: clamp(2.2rem, 1.4rem + 1.2vw, 2.6rem);
   letter-spacing: clamp(0.1rem, 0.05rem + 0.4vw, 0.3rem);
   margin-bottom: clamp(1.6rem, 3vh, 3.2rem);
 }
@@ -98,7 +98,7 @@ defineEmits(["close-modal"]);
     width: min(72ch, 78%);
     margin-top: 30%;
   }
-  
+
   .neko {
     width: clamp(5.2rem, 16%, 8rem);
   }
@@ -106,7 +106,7 @@ defineEmits(["close-modal"]);
 @media (max-width: 680px) {
   .infoContainer {
     width: min(50ch, 88%);
-        margin-top: 30%;
+    margin-top: 30%;
     text-align: left;
   }
 
@@ -117,6 +117,7 @@ defineEmits(["close-modal"]);
     width: clamp(6rem, 40%, 14rem);
   }
 }
+
 @media (max-width: 480px) {
   .infoContainer {
     width: 92%;
@@ -124,12 +125,19 @@ defineEmits(["close-modal"]);
   }
 
   .infoTxt {
-    font-size: clamp(1.5rem, 1.2rem + 1.4vw, 1.9rem);
+    font-size: clamp(1.5rem, 1.2rem + 1.4vw, 1.2rem);
     line-height: 1.55;
   }
 
   .modalNav {
     font-size: clamp(1.1rem, 1rem + 0.8vw, 1.4rem);
+  }
+
+  .neko {
+    position: static;
+    display: block;
+    margin: 2rem auto 0;
+    width: clamp(6rem, 20%, 10em);
   }
 }
 </style>

@@ -14,9 +14,9 @@
   line-height: 1.15;
   padding: 2% 0 1%;
   min-width: clamp(18rem, 22vw, 20rem);
-  color: #081fec;
+  color: #0019fc;
   text-shadow: 0.1rem 0.1rem 0.25rem #ffffff;
-  border: 0.4rem solid #0040ff;
+  border: 0.4rem solid #0019fc;
   border-radius: 1.2rem;
   box-shadow: 1.6rem 1.6rem 1.3rem #0e0d0d;
   background: linear-gradient(135deg, #ff9900, #ff7a00 45%, #ff8800);
@@ -50,9 +50,9 @@
   .localBtn {
     min-width: clamp(14rem, 68vw, 14rem);
     right: 8%;
-    font-size: clamp(1.8rem, 4.4vw, 2.4rem);
-    padding: clamp(0.8rem, 1.2vh, 1.2rem) clamp(1.4rem, 6vw, 2.4rem)
-      clamp(0rem, 8vw, 4rem);
+    font-size: clamp(0.8em, 4.4vw, 1.0em);
+    padding: clamp(1.0rem, 1.2vh, 1.0rem) clamp(1.4rem, 6vw, 2.4rem)
+      clamp(0rem, 8vw, 2.0rem)
   }
 }
 
