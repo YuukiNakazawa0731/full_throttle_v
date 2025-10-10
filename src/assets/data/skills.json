@@ -8,9 +8,9 @@
   },
   {
     "id": 2,
-    "img": "js_jq.png",
+    "img": "js_logo.png",
     "alt": "js",
-    "label": "JavaScript <small>(jQuery)</small>",
+    "label": "JavaScript",
     "text": "JavaScriptの基本文法から、配列・オブジェクトの操作、非同期処理（Promise/async/await）まで幅広く理解しています。DOM操作やイベント処理、アニメーション機能の実装も行うことができます。<br />jQueryを使用し、フォームバリデーションやAjax通信、スライダーやモーダルなどのUIパーツの実装もできます。<br />また、ES6以降の新しい構文や、モジュール化にも対応しています。<br />API連携やデータの動的表示も経験しています。"
   },
   {
@@ -34,8 +34,16 @@
     "label": "vue.js",
     "text": "Vue.jsを用いたSPA（シングルページアプリケーション）の開発経験があります。基本的な操作やコンポーネント設計、状態管理（Composition APIやPiniaなど）を理解し、実際のプロジェクトで実装した経験があります。<br />外部ライブラリ（Vue Routerやaxios、UIフレームワーク等）を活用した開発も可能です。<br />また、コンポーネント間のデータ連携やスロット、カスタムイベントの設計も行えます。"
   },
-  {
+    {
     "id": 6,
+    "img": "ts_logo.png",
+    "alt": "typescript",
+    "label": "TypeScript",
+    "text": "TypeScriptの基本的な文法や型システムを理解し、実際のプロジェクトで活用した経験があります。JavaScriptとの違いや、型定義ファイルの利用方法についても学習しました。ReactやVue.jsなどのフレームワークと組み合わせて、より堅牢なアプリケーションの開発が可能です。"
+  },
+
+  {
+    "id": 7,
     "img": "other.png",
     "alt": "other",
     "label": "Others",

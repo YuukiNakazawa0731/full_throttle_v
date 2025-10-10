@@ -25,8 +25,9 @@
             @mouseenter="hoverIdx = idx"
             @mouseleave="hoverIdx = null"
             @animationend="onAnimationEnd(idx)"
+            @error="(e) => (e.target.src = blankPlaceholder)"
           />
-          <img v-else :src="noImage" class="worksImg" alt="no image" />
+          <img v-else :src="blankPlaceholder" class="worksImg" alt="no image" />
         </a>
         <a href="javascript:void(0)" class="worksTitleLink">
           <p class="worksHeading">{{ item.heading }}</p>
@@ -56,8 +57,8 @@ const lastHoverIdx = ref(null);
 const showModal = ref(false);
 const selectedWork = ref(null);
 
-const noImage = new URL(
-  "../../../assets/images/works/noimage.png",
+const blankPlaceholder = new URL(
+  "../../../assets/images/works/blank.png",
   import.meta.url
 ).href;
 

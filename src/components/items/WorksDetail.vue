@@ -15,6 +15,7 @@
           :src="images[currentIdx].src"
           :alt="images[currentIdx].alt"
           class="worksImgBox"
+          @error="(e) => (e.target.src = blankPlaceholder)"
         />
       </div>
       <button
@@ -56,6 +57,10 @@
 <script setup>
 import { ref, computed, defineProps, defineEmits, watch } from "vue";
 import settings from "@/assets/data/settings.json";
+const blankPlaceholder = new URL(
+  "../../assets/images/works/blank.png",
+  import.meta.url
+).href;
 
 const images = computed(() => props.detail.images || []);
 const total = computed(() => images.value.length);
@@ -166,7 +171,7 @@ function next() {
 
 .sliderDots {
   position: absolute;
-  bottom: 0.4rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(48%);
   height: 10%;
@@ -175,10 +180,10 @@ function next() {
 }
 
 .sliderDots span {
+  margin: 0 0.5rem;
   cursor: pointer;
   font-size: 2rem;
   color: #ccc;
-  margin: 0 0.5rem;
 }
 .sliderDots .active {
   color: #ff9100;
@@ -187,6 +192,7 @@ function next() {
 .worksTitleOuter {
   position: relative;
   margin: clamp(2rem, 3vh, 4rem) auto 0;
+  margin-top: 8%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,7 +238,7 @@ function next() {
 .worksTxt {
   margin: 2% auto 0;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
   color: #fff;
   font-size: clamp(1.4rem, 1rem + 0.6vw, 1.8rem);
 }

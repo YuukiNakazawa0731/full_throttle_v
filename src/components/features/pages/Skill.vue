@@ -18,7 +18,12 @@
           transitionDelay: idx * 0.3 + 's',
         }"
       >
-        <img :src="getImgUrl(item.img)" class="skillImg" :alt="item.alt" />
+        <img
+          :src="getImgUrl(item.img)"
+          class="skillImg"
+          :alt="item.alt"
+          @error="(e) => (e.target.src = getImgUrl('other.png'))"
+        />
         <div class="skillCont">
           <p class="skillLabel" v-html="item.label"></p>
           <p class="skillTxt" v-html="item.text"></p>

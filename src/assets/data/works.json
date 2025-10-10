@@ -102,5 +102,27 @@
       "text": "既存のポートフォリオサイトをスキルアップのためにリニューアルしたものです。<br>Vue.jsを使用し、作り直しました",
       "tools": "design/Vue.js(Vue3)/Vite"
     }
+  },
+  {
+    "heading": "草々 -sow sow v-",
+    "child": "簡易掲示板サイト",
+    "detail": {
+      "title": {
+        "text": "草々 -sow sow-",
+        "href": "https://yuukinakazawa0731.github.io/sowsow_v/"
+      },
+      "images": [
+        {
+          "src": "sowsow_v_img1.png",
+          "alt": "sowsow_v_img1"
+        },
+        {
+          "src": "sowsow_v_img2.png",
+          "alt": "sowsow_v_img2"
+        }
+      ],
+      "text": "以前作成した掲示板サイトをvuetifyでリニューアルしました。<br>デザインを一新し、使いやすさを向上させました。<br>バックエンドではFirebaseを使用し、リアルタイムでの書き込み反映を実装しました。",
+      "tools": "design/HTML/Vuetify/typescript"
+    }
   }
 ]
