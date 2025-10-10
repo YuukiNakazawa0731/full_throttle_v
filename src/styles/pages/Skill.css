@@ -39,6 +39,7 @@
 
 .skillTxt {
   padding-top: 3%;
+    font-size: clamp(1.4rem, 1.2rem + 0.5vw, 1.7rem);
 }
 
 .skillLink {
@@ -98,6 +99,7 @@
 .licenseTxt {
   padding: 2% 0.5% 0;
   text-align: left;
+  font-size: clamp(1.4rem, 1.2rem + 0.5vw, 1.7rem);
 }
 
 @media (max-width: 780px) {

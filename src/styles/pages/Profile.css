@@ -76,6 +76,7 @@
 
 .profileTxtFoot {
   padding: 0.5% 5%;
+  font-size: clamp(1.4rem, 1.2rem + 0.5vw, 1.7rem);
   line-height: 1.6;
   word-break: break-word;
 }
@@ -106,8 +107,8 @@
 
 @media (max-width: 480px) {
   .profileTitle {
-  width: 90%;
-  font-size: 2.2rem;
+    width: 90%;
+    font-size: 2.2rem;
   }
 
   .profileInnerL,
@@ -128,11 +129,10 @@
     display: none;
   }
   .profileTxtHead {
-  font-size: 1.6rem;
-}
+    font-size: 1.6rem;
+  }
 
-.profileTxtFoot {
-  font-size: 1.4rem;
-}
-
+  .profileTxtFoot {
+    font-size: 1.4rem;
+  }
 }
